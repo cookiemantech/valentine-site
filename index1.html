@@ -45,9 +45,9 @@ button{
 
 <body>
 
-<h1>Would you be my Valentine, Piuu?</h1>
+<h1 id="question">Would you be my Valentine, Piuu?</h1>
 
-<div>
+<div id="buttons">
 <button id="yes" onclick="sayYes()">Yes</button>
 <button id="no" onclick="sayNo()">No</button>
 </div>
@@ -58,11 +58,21 @@ button{
 
 <script>
 function sayYes(){
+    // Hide question and buttons
+    document.getElementById("question").style.display = "none";
+    document.getElementById("buttons").style.display = "none";
+    
+    // Show message and panda
     document.getElementById("message").innerHTML = "I LOOOOVEEE YOU TOOOOOO! YAAYYYYY!";
     document.getElementById("panda").src = "panda2.jpg";
 }
 
 function sayNo(){
+    // Hide question and buttons
+    document.getElementById("question").style.display = "none";
+    document.getElementById("buttons").style.display = "none";
+    
+    // Show message and panda
     document.getElementById("message").innerHTML = "No returns, now you are mine Bayko!";
     document.getElementById("panda").src = "panda3.jpg";
 }
