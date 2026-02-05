@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+
+<style>
+body{
+    text-align:center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+}
+
+button{
+    padding:15px 25px;
+    font-size:18px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#yes{ background:#28a745; color:white; }
+#no{ background:#dc3545; color:white; }
+</style>
+</head>
+
+<body>
+
+<h1>Would you be my Valentine, Piuu?</h1>
+
+<div>
+<button id="yes" onclick="sayYes()">Yes</button>
+<button id="no" onclick="sayNo()">No</button>
+</div>
+
+<h2 id="message"></h2>
+
+<script>
+function sayYes(){
+    document.getElementById("message").innerHTML = "I love you too Piuu!";
+}
+
+function sayNo(){
+    document.getElementById("no").style.display = "none";
+    document.getElementById("message").innerHTML = "I still love you.";
+}
+</script>
+
+</body>
+</html>
