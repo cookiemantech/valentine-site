@@ -8,13 +8,13 @@
 body{
     text-align:center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(#ff9a9e,#fad0c4);
+    background: linear-gradient(#ffe6f0, #ffd1e6);
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    color:white;
+    color: #001f4d; /* dark blue text */
 }
 
 button{
@@ -22,12 +22,24 @@ button{
     font-size:18px;
     margin:10px;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
+    transition:0.3s;
 }
 
 #yes{ background:#28a745; color:white; }
 #no{ background:#dc3545; color:white; }
+
+#message{
+    font-size:28px;
+    margin-top:20px;
+}
+
+#panda{
+    margin-top:20px;
+    max-width:300px;
+    border-radius:20px;
+}
 </style>
 </head>
 
@@ -42,14 +54,17 @@ button{
 
 <h2 id="message"></h2>
 
+<img id="panda" src="panda1.jpg" alt="Panda Image">
+
 <script>
 function sayYes(){
-    document.getElementById("message").innerHTML = "I love you too Piuu!";
+    document.getElementById("message").innerHTML = "I LOOOOVEEE YOU TOOOOOO! YAAYYYYY!";
+    document.getElementById("panda").src = "panda2.jpg";
 }
 
 function sayNo(){
-    document.getElementById("no").style.display = "none";
-    document.getElementById("message").innerHTML = "I still love you.";
+    document.getElementById("message").innerHTML = "No returns, now you are mine Bayko!";
+    document.getElementById("panda").src = "panda3.jpg";
 }
 </script>
 
